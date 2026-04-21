@@ -91,11 +91,11 @@ class RongtaPrinterPlugin : FlutterPlugin, MethodCallHandler, ConnectListener {
         val escFac: CmdFactory = EscFactory()
         val escCmd = escFac.create()
 
-        commonSetting.align = CommonEnum.ALIGN_MIDDLE
+        commonSetting.align = CommonEnum.ALIGN_LEFT
         escCmd.append(escCmd.getCommonSettingCmd(commonSetting))
 
         val bitmapSetting = BitmapSetting()
-        bitmapSetting.bimtapLimitWidth = 500
+        bitmapSetting.bimtapLimitWidth = 576
 
         val bmp = BitmapFactory.decodeByteArray(logo, 0, logo.size)
         escCmd.append(escCmd.getBitmapCmd(bitmapSetting, Bitmap.createBitmap(bmp)))
