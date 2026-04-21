@@ -95,7 +95,7 @@ class RongtaPrinterPlugin : FlutterPlugin, MethodCallHandler, ConnectListener {
         escCmd.append(escCmd.getCommonSettingCmd(commonSetting))
 
         val bitmapSetting = BitmapSetting()
-        bitmapSetting.bimtapLimitWidth = 576
+        bitmapSetting.bimtapLimitWidth = 800
 
         val bmp = BitmapFactory.decodeByteArray(logo, 0, logo.size)
         escCmd.append(escCmd.getBitmapCmd(bitmapSetting, Bitmap.createBitmap(bmp)))

@@ -67,7 +67,7 @@ public class RongtaPrinterPlugin: NSObject, FlutterPlugin {
 
         let bitmapSetting: BitmapSetting = printer.bitmapSetts
         bitmapSetting.alignmode = Align_Left
-        bitmapSetting.limitWidth = 72*8;
+        bitmapSetting.limitWidth = 100*8;
 
         let receiptImage = UIImage(data: receipt.data)!
         let data = escCmd!.getBitMapCmd(bitmapSetting, image: receiptImage)
